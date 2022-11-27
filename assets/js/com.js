@@ -9,7 +9,7 @@ function bioUpdate() {
     const text = document.querySelector('.bio-text');
 
     // 文本
-    const contentArray = ["123456789", "ABCDEFG", "一二三四五六七八九"];
+    const contentArray = ["ForcecatDevsAPIs", "力猫开发社团API合集", "哇哇哇，阿巴阿巴阿巴"];
     let index = 0;
 
     // 颜文字

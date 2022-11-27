@@ -215,6 +215,9 @@ body{
     position: relative;
     color: aliceblue;
     text-align: center;
+    font-size: 24px;
+    color: #3f6600;
+
 }
 
 .bio-text::after {
@@ -235,6 +238,8 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
+    font-size: 32px;
+    color: #3f6600;
 }
 
 .bio span {
