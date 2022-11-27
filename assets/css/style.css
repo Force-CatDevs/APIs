@@ -1,0 +1,257 @@
+*{
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: calc(100% + 100vh);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%) ;
+    background-repeat: no-repeat;
+}
+.Bar{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    /*  */
+}
+.icon-nav{
+    list-style: none;
+    background-color: #231f2e;
+    padding: 0 12px 12px 12px;
+    /* 弹性布局 */
+    display: flex;
+    flex-direction: column;
+    /* 均匀排列每个首个元素 首个元素在起点  末尾元素在终点 */
+    justify-content: space-between;
+    border-radius: 10px;
+    /* 阴影 */
+    box-shadow: 0 10px 50px rgba(6,5,59,0.25);
+}
+.icon-nav li{
+    margin-top: 12px;
+}
+.icon-nav li.split{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+.icon-nav a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    position: relative;
+}
+.icon-nav a i{
+    font-size: 20px;
+}
+/* 提示层 */
+.icon-nav a span{
+    position: absolute;
+    /* 显示位置计算 */
+    left: calc(100% + 24px);
+    background-color: #2c71e3;
+    font-size: 15px;
+    /* 不换行 */
+    white-space: nowrap;
+    padding: 8px 16px;
+    border-radius: 6px;
+    /* 默认隐藏 */
+    transform: scale(0);
+    opacity: 0;
+    /* 设置基点 */
+    transform-origin: center left;
+    /* 设置过度 */
+    transition: 0.15s cubic-bezier(1, 0.26, 0, 0.84);;
+}
+.icon-nav a span::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #2c71e3;
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    border-radius: 3px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.icon-nav a:hover,
+.icon-nav a:focus,
+.icon-nav a:active{
+    background-color: #2c71e3;
+    outline: none;
+}
+.icon-nav a:hover span{
+    transform: scale(1);
+    opacity: 1;
+}
+.icon-nav a:active span,
+.icon-nav a:focus span{
+    transform: scale(0);
+    opacity: 1;
+}
+
+/* RowBar */
+.RowBar{
+    display: flex;
+    align-items: center;
+    height: 128px;
+    justify-content: center;
+    padding-left: 0;
+    /*  */
+}
+.icon-nav-row{
+    position: relative;
+    list-style: none;
+    background-color: #231f2e;
+    padding: 0 12px 12px 12px;
+    /* 弹性布局 */
+    display: flex;
+    flex-direction: row;
+    /* 均匀排列每个首个元素 首个元素在起点  末尾元素在终点 */
+    justify-content: space-between;
+    border-radius: 10px;
+    /* 阴影 */
+    box-shadow: 0 10px 50px rgba(6,5,59,0.25);
+}
+.icon-nav-row li{
+    margin-top: 12px;
+}
+.icon-nav-row li.split{
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255,255,255,0.15);
+}
+.icon-nav-row a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    position: relative;
+}
+.icon-nav-row a i{
+    font-size: 20px;
+}
+/* 提示层 */
+.icon-nav-row a span{
+    position: absolute;
+    /* 显示位置计算 */
+    bottom: calc(100% - 100px);
+    background-color: #2c71e3;
+    font-size: 15px;
+    /* 不换行 */
+    white-space: nowrap;
+    padding: 8px 16px;
+    border-radius: 6px;
+    /* 默认隐藏 */
+    transform: scale(0);
+    opacity: 0;
+    /* 设置基点 */
+    transform-origin: center top;
+    /* 设置过度 */
+    transition: 0.15s cubic-bezier(1, 0.26, 0, 0.84);;
+}
+/* 小三角 */
+.icon-nav-row a span::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #2c71e3;
+    position: absolute;
+    left: 42%;
+    top: 0;
+    border-radius: 3px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.icon-nav-row a:hover,
+.icon-nav-row a:focus,
+.icon-nav-row a:active{
+    background-color: #2c71e3;
+    outline: none;
+}
+.icon-nav-row a:hover span{
+    transform: scale(1);
+    opacity: 1;
+}
+.icon-nav-row a:active span,
+.icon-nav-row a:focus span{
+    transform: scale(0);
+    opacity: 1;
+}
+.button-survey-agree{
+    background-color: #231f2e;
+    border-radius: 5px;
+    position: relative;
+    width: 256px;
+    height: 32px;
+    align-self: center;
+    left: 320px;
+    bottom: 32px;
+}
+.button-survey-disagree{
+    background-color: #231f2e;
+    border-radius: 5px;
+    position: relative;
+    width: 256px;
+    height: 32px;
+    align-self: center;
+    left: 320px;
+    bottom: 256px;
+}
+
+.bio-text {
+    display: inline-block;
+    position: relative;
+    color: aliceblue;
+    text-align: center;
+}
+
+.bio-text::after {
+    content: " ";
+    position: absolute;
+    right: -6px;
+    top: 5px;
+    height: 22px;
+    width: 3px;
+    animation: insert 1s steps(1) infinite;
+}
+
+.bio {
+    line-height: 30px;
+    height: 30px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.bio span {
+    margin: 0 10px;
+    font-size: 22px;
+    color: #3f6600;
+    font-weight: 600;
+}
+
+@keyframes insert {
+
+    0%,
+    100% {
+        background-color: var(--gray);
+    }
+
+    50% {
+        background-color: transparent;
+    }
+}
