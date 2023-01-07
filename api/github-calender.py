@@ -29,10 +29,18 @@ class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = self.path
         user = path.split('?')[1]
-        data = getdata(user)
-        self.send_response(200)
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Content-type', 'application/json')
-        self.end_headers()
-        self.wfile.write(json.dumps(data).encode('utf-8'))
+        if not user == "":
+            data = getdata(user)
+            self.send_response(200)
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(data).encode('utf-8'))
+        else:
+            data = "{"code":"400", "msg": "非法参数"}"
+            self.send_response(400)
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(data).encode('utf-8'))
         return
