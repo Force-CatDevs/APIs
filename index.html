@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="cn-zh" xmlns="">
+<html lang="cn-zh">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>力猫开发社团-API合集</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/65a2433c04.js" crossorigin="anonymous"></script>
@@ -11,16 +12,17 @@
     <script src="https://res.furcode.cn/jquery/popper/1.14.7/popper.min.js"></script>
     <script src="https://res.furcode.cn/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body class="container-fluid">
-<div class="RowBar sticky-top" id="RowBar">
-    <ul class="icon-nav-row">
-        <li>
-            <a href="https://www.forcecat.cn">
-                <i class="fa fa-home"></i>
-                <span>Home</span>
-            </a>
-        </li>
-        <li class="split">
+    <div class="RowBar sticky-top" id="RowBar">
+        <ul class="icon-nav-row">
+            <li>
+                <a href="https://www.forcecat.cn">
+                    <i class="fa fa-home"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <!-- <li class="split">
             <a href="#tools">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
                 <span>Tools</span>
@@ -50,88 +52,27 @@
                 <span>Settings</span>
             </a>
         </li>
-    </ul>
-</div>
-<!--<div class="Bar align-middle" id="Bar">
-    <ul class="icon-nav">
-        <li>
-            <a href="#">
-                <i class="fa fa-home"></i>
-                <span>Home</span>
-            </a>
-        </li>
-        <li class="split">
-            <a href="#tools">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                <span>Tools</span>
-            </a>
-        </li>
-        <li>
-            <a href="#server">
-                <i class="fa-solid fa-server"></i>
-                <span>Server</span>
-            </a>
-        </li>
-        <li>
-            <a href="#database">
-                <i class="fa-solid fa-database"></i>
-                <span>Database</span>
-            </a>
-        </li>
-        <li>
-            <a href="#blog">
-                <i class="fa-solid fa-newspaper"></i>
-                <span>Blog</span>
-            </a>
-        </li>
-        <li>
-            <a href="#settings">
-                <i class="fa-solid fa-gear"></i>
-                <span>Settings</span>
-            </a>
-        </li>
-    </ul>
-</div>-->
-
-<div class="container icon-nav" style="margin-bottom: 15px">
-    <span class="bio">/*
-    <span class="bio-text" >_</span>
-    */</span>
-    <script src="assets/js/com.js"></script>
-</div>
-
-<div id="database">
-    <div class="container container-new" style="margin-bottom: 15px">
-        <h1 style="text-align: center; color: white">ForcecatDevsAPIs</h1>
-        <h4 style="text-align: left; color: white">
-            力猫开发社团-API合集
-            <br>
-            <span>只能用小写的API路径</span>
-            <br>
-            <span>Only lowercase API paths can be used</span>
-            <br>
-            <hr>
-            <span>APIS: </span>
-            <a href="api/hello">API/Hello<span style="z-index: 2">Usage: No Param</span></a>
-            <a href="api/github-calender">API/Github-Calender<span style="z-index: 2">Usage: api/github-calender?user={name}</span></a>
-        </h4>
+    </ul> -->
     </div>
-</div>
 
-<!--
-<script>
-    // add active class in selected tab
-    const list = document.querySelectorAll('.Bar .RowBar');
+    <div class="container icon-nav" style="margin-bottom: 15px">
+        <span class="bio">/*
+            <span class="bio-text">_</span>
+            */</span>
+        <script src="assets/js/com.js"></script>
+    </div>
 
-    function activeLink() {
-        list.forEach((item) =>
-            item.classList.remove('active'));
-        this.classList.add('active');
-    }
-
-    list.forEach((item) =>
-        item.addEventListener('click', activeLink));
-</script>-->
-
+    <div id="database">
+        <div class="container container-new" style="margin-bottom: 15px">
+            <h2 style="text-align: center; color: white">ForcecatDevsAPIs【力猫开发社团-API合集】</h2>
+            <h6 style="color: #fff; text-align: center;"><em>【仅小写API路径/Lowercase API Paths Only】</em></h6>
+            <h4>
+                <a href="api/Gethub-Calender" style="text-decoration: none;text-align: center;">热力图
+                    <span>用法: api/github-calender?user={github 用户名}</span></a>
+                <a href="api/hello" style="text-decoration: none;text-align: center;">Hello<span>暂无可用参数</span></a>
+            </h4>
+        </div>
+    </div>
 </body>
+
 </html>
