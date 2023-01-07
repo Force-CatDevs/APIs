@@ -3,6 +3,13 @@
     {
       "src": "/python",
       "dest": "/api/python"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)", "status": 404,
+      "dest": "/404.html"
     }
   ]
 }
