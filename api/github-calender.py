@@ -22,7 +22,6 @@ def getdata(name):
     datacount = list(map(int, datacount))
     contributions = sum(datacount)
     datalist = []
-    print(datadate)
     for index, item in enumerate(datadate):
         itemlist = {"date": item, "count": datacount[index]}
         datalist.append(itemlist)
@@ -31,7 +30,6 @@ def getdata(name):
         "total": contributions,
         "contributions": datalistsplit
     }
-    print(returndata)
     return returndata
 
 
@@ -54,10 +52,3 @@ class handler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps(data).encode('utf-8'))
         return
-
-
-if __name__ == '__main__':
-    host = ('localhost', 8888)
-    server = HTTPServer(host, handler)
-    print("Starting server, listen at: %s:%s" % host)
-    server.serve_forever()
