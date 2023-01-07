@@ -318,7 +318,7 @@ body {
     text-decoration: none;
     text-align: center;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     border-radius: 8px;
     position: relative;
 }
