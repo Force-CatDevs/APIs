@@ -1,9 +1,9 @@
 # -*- coding: UTF-8 -*-
-import http.server
 
 import requests
+from urllib import parse
 import re
-from http.server import BaseHTTPRequestHandler
+from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
 
@@ -36,19 +36,28 @@ def getdata(name):
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = self.path
-        if "?" in path:
-            user = path.split('?')[1]
-            data = getdata(user)
-            self.send_response(200)
-            self.send_header('Access-Control-Allow-Origin', '*')
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            self.wfile.write(json.dumps(data).encode('utf-8'))
-        else:
+        result = parse.urlparse(path)
+        query = parse.parse_qs(result.query).get("user", [])
+        if not len(query) > 0:
             data = {"code": "400", "msg": "Invalid Parameter", "param": {"user": "str"}}
             self.send_response(400)
             self.send_header('Access-Control-Allow-Origin', '*')
             self.send_header('Content-type', 'application/json')
             self.end_headers()
             self.wfile.write(json.dumps(data).encode('utf-8'))
+        else:
+            # user = path.split('?')[1]
+            data = getdata(query[0])
+            self.send_response(200)
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(data).encode('utf-8'))
         return
+
+
+if __name__ == "__main__":
+    host = ('localhost', 8080)
+    server = HTTPServer(host, handler)
+    print("Starting server, listen at: %s:%s" % host)
+    server.serve_forever()
