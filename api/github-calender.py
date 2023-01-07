@@ -3,7 +3,7 @@ import http.server
 
 import requests
 import re
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler
 import json
 
 
