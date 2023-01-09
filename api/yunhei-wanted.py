@@ -34,11 +34,11 @@ def getdata(name):
 
 
 class handler(BaseHTTPRequestHandler):
-    def do_GET(self):
+    def do_Get(self):
         path = self.path
         result = parse.urlparse(path)
         query = parse.parse_qs(result.query).get("user", [])
-        if len(query) == 0:
+        if not len(query) > 0:
             data = {"code": "400", "msg": "Invalid Parameter", "param": {"user": "str"}}
             self.send_response(400)
             self.send_header('Access-Control-Allow-Origin', '*')
@@ -59,5 +59,6 @@ class handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     host = ('localhost', 8080)
     server = HTTPServer(host, handler)
+    print("Listening http://localhost:8080")
     print("Starting server, listen at: %s:%s" % host)
     server.serve_forever()
