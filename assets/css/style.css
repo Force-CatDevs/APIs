@@ -1,29 +1,25 @@
-* {
+*{
     /* 初始化 */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+body{
     height: calc(100% + 100vh);
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    text-align: center;
 }
-
-.Bar {
+.Bar{
     display: flex;
     position: fixed;
     justify-content: center;
     align-items: center;
     padding-left: 10px;
-    color: transparent;
+    /*  */
 }
-
-.icon-nav {
+.icon-nav{
     list-style: none;
     background-color: #231f2e;
     padding: 0 12px 12px 12px;
@@ -34,24 +30,20 @@ body {
     justify-content: space-between;
     border-radius: 10px;
     /* 阴影 */
-    box-shadow: 0 10px 50px rgba(6, 5, 59, 0.25);
+    box-shadow: 0 10px 50px rgba(6,5,59,0.25);
 }
-
-.icon-nav li {
+.icon-nav li{
     margin-top: 12px;
 }
-
-.icon-nav li.split {
+.icon-nav li.split{
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255,255,255,0.15);
 }
-
-.icon-nav a {
+.icon-nav a{
     color: #fff;
     text-decoration: none;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
     width: 48px;
@@ -59,13 +51,11 @@ body {
     border-radius: 8px;
     position: relative;
 }
-
-.icon-nav a i {
+.icon-nav a i{
     font-size: 20px;
 }
-
 /* 提示层 */
-.icon-nav a span {
+.icon-nav a span{
     position: absolute;
     /* 显示位置计算 */
     left: calc(100% + 24px);
@@ -81,11 +71,9 @@ body {
     /* 设置基点 */
     transform-origin: center left;
     /* 设置过度 */
-    transition: 0.15s cubic-bezier(1, 0.26, 0, 0.84);
-    ;
+    transition: 0.15s cubic-bezier(1, 0.26, 0, 0.84);;
 }
-
-.icon-nav a span::before {
+.icon-nav a span::before{
     content: "";
     width: 12px;
     height: 12px;
@@ -96,27 +84,24 @@ body {
     border-radius: 3px;
     transform: translateY(-50%) rotate(45deg);
 }
-
 .icon-nav a:hover,
 .icon-nav a:focus,
-.icon-nav a:active {
+.icon-nav a:active{
     background-color: #2c71e3;
     outline: none;
 }
-
-.icon-nav a:hover span {
+.icon-nav a:hover span{
     transform: scale(1);
     opacity: 1;
 }
-
 .icon-nav a:active span,
-.icon-nav a:focus span {
+.icon-nav a:focus span{
     transform: scale(0);
     opacity: 1;
 }
 
 /* RowBar */
-.RowBar {
+.RowBar{
     display: flex;
     align-items: center;
     height: 128px;
@@ -124,8 +109,7 @@ body {
     padding-left: 0;
     /*  */
 }
-
-.icon-nav-row {
+.icon-nav-row{
     position: relative;
     list-style: none;
     background-color: #231f2e;
@@ -137,20 +121,17 @@ body {
     justify-content: space-between;
     border-radius: 10px;
     /* 阴影 */
-    box-shadow: 0 10px 50px rgba(6, 5, 59, 0.25);
+    box-shadow: 0 10px 50px rgba(6,5,59,0.25);
 }
-
-.icon-nav-row li {
+.icon-nav-row li{
     margin-top: 12px;
 }
-
-.icon-nav-row li.split {
+.icon-nav-row li.split{
     margin-left: 20px;
     padding-left: 20px;
-    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255,255,255,0.15);
 }
-
-.icon-nav-row a {
+.icon-nav-row a{
     color: #fff;
     text-decoration: none;
     display: flex;
@@ -161,13 +142,11 @@ body {
     border-radius: 8px;
     position: relative;
 }
-
-.icon-nav-row a i {
+.icon-nav-row a i{
     font-size: 20px;
 }
-
 /* 提示层 */
-.icon-nav-row a span {
+.icon-nav-row a span{
     position: absolute;
     /* 显示位置计算 */
     bottom: calc(100% - 100px);
@@ -183,11 +162,10 @@ body {
     /* 设置基点 */
     transform-origin: center top;
     /* 设置过度 */
-    transition: 0.15s cubic-bezier(1, 0.26, 0, 0.84);
+    transition: 0.15s cubic-bezier(1, 0.26, 0, 0.84);;
 }
-
 /* 小三角 */
-.icon-nav-row a span::before {
+.icon-nav-row a span::before{
     content: "";
     width: 12px;
     height: 12px;
@@ -198,26 +176,22 @@ body {
     border-radius: 3px;
     transform: translateY(-50%) rotate(45deg);
 }
-
 .icon-nav-row a:hover,
 .icon-nav-row a:focus,
-.icon-nav-row a:active {
+.icon-nav-row a:active{
     background-color: #2c71e3;
     outline: none;
 }
-
-.icon-nav-row a:hover span {
+.icon-nav-row a:hover span{
     transform: scale(1);
     opacity: 1;
 }
-
 .icon-nav-row a:active span,
-.icon-nav-row a:focus span {
+.icon-nav-row a:focus span{
     transform: scale(0);
     opacity: 1;
 }
-
-.button-survey-agree {
+.button-survey-agree{
     background-color: #231f2e;
     border-radius: 5px;
     position: relative;
@@ -227,8 +201,7 @@ body {
     left: 320px;
     bottom: 32px;
 }
-
-.button-survey-disagree {
+.button-survey-disagree{
     background-color: #231f2e;
     border-radius: 5px;
     position: relative;
@@ -246,6 +219,7 @@ body {
     text-align: center;
     font-size: 24px;
     color: #3f6600;
+
 }
 
 .bio-text::after {
@@ -288,8 +262,7 @@ body {
         background-color: transparent;
     }
 }
-
-.container-new {
+.container-new{
     list-style: none;
     background-color: #231f2e;
     padding: 0 12px 12px 12px;
@@ -300,35 +273,29 @@ body {
     justify-content: space-between;
     border-radius: 10px;
     /* 阴影 */
-    box-shadow: 0 10px 50px rgba(6, 5, 59, 0.25);
+    box-shadow: 0 10px 50px rgba(6,5,59,0.25);
 }
-
-.container-new li {
+.container-new li{
     margin-top: 12px;
 }
-
-.container-new li.split {
+.container-new li.split{
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255,255,255,0.15);
 }
-
-.container-new a {
+.container-new a{
     color: #fff;
     text-decoration: none;
-    text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     border-radius: 8px;
     position: relative;
 }
-
-.container-new a i {
+.container-new a i{
     font-size: 20px;
 }
-
 /* 提示层 */
-.container-new a span {
+.container-new a span{
     position: absolute;
     /* 显示位置计算 */
     bottom: calc(100% - 75px);
@@ -345,12 +312,10 @@ body {
     /* 设置基点 */
     transform-origin: center top;
     /* 设置过度 */
-    transition: 0.15s cubic-bezier(1, 0.26, 0, 0.84);
-    z-index: 1;
+    transition: 0.15s cubic-bezier(1, 0.26, 0, 0.84);;
 }
-
 /* 小三角 */
-.container-new a span::before {
+.container-new a span::before{
     content: "";
     width: 12px;
     height: 12px;
@@ -361,21 +326,18 @@ body {
     border-radius: 3px;
     transform: translateY(-50%) rotate(45deg);
 }
-
 .container-new a:hover,
 .container-new a:focus,
-.container-new a:active {
-    background-color: transparent;
+.container-new a:active{
+    background-color: #2c71e3;
     outline: none;
 }
-
-.container-new a:hover span {
+.container-new a:hover span{
     transform: scale(1);
     opacity: 1;
 }
-
 .container-new a:active span,
-.container-new a:focus span {
+.container-new a:focus span{
     transform: scale(0);
     opacity: 1;
 }
