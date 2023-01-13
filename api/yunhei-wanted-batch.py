@@ -56,7 +56,7 @@ class handler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps(data).encode('utf-8'))
         except:
-            data = {"code": "400", "msg": "Invalid Parameter", "param": {"users": ["user1", "user2"]}, "return": {"Blocks": ["Wanted_qq"], "{QQ}": "Result"}}
+            data = {"code": "400", "msg": "Invalid Parameter", "param": {"users": {"users": ["user1", "user2"]}}, "return": {"Blocks": ["Wanted_qq"], "{QQ}": "Result"}}
             self.send_response(400)
             self.send_header('Access-Control-Allow-Origin', '*')
             self.send_header('Content-type', 'application/json')
